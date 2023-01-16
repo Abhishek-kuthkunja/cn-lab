@@ -9,7 +9,7 @@ int main()
     n=p*q;
     for(int i=2;i<phi;i++)
     {
-        if((phi/i)!=0)
+        if((phi%i)!=0)
         {
             e=i;
             break;
