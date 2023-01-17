@@ -1,13 +1,11 @@
 #include<stdio.h>
-#include<conio.h>
-#include<math.h>
  
  int sender(int b[10],int k)
  {
  	int checksum,sum=0,i;
         	printf("\n****SENDER****\n");
      
-for(i=0;i<k;i++)
+        for(i=0;i<k;i++)
       		sum+=b[i];
       		printf("SUM IS: %d",sum);
                      
@@ -28,7 +26,7 @@ int checksum,sum=0,i;
       	printf("\nRECEIVER's CHECKSUM IS:%d",checksum);
       		return checksum;
   }
-   main()
+  int main()
    {
      	int a[10],i,m,scheck,rcheck;
      	printf("\nENTER number");
@@ -37,10 +35,13 @@ int checksum,sum=0,i;
      	for(i=0;i<m;i++)
     	scanf("%d",&a[i]);
     	scheck=sender(a,m);
+    	//a[1]=0100;
     	rcheck=receiver(a,m,scheck);
     	if(rcheck==0)
       		printf("\n\nNO ERROR IN TRANSMISSION\n\n");
     	else
       		printf("\n\nERROR DETECTED");
-               getch();
+      		
+      	return 0;
+              
 } 	
