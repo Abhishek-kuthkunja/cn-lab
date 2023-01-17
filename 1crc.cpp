@@ -54,7 +54,7 @@ string crc(string data,string divisor)
 int main()
 {
     string data,divisor;
-    cout<<"enter the data and string";
+    cout<<"enter the data and divisor";
    cin>>data>>divisor;
     string rem=crc(data,divisor);
    string final=data+rem;
